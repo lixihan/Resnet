@@ -102,9 +102,15 @@ We use 10 epochs for fitting. Try other epochs can achieve different results. Be
 
 Create a sample picture sample.jpg for classfication. Run API.py to initialize the REST API service. Then use curl to request to the /predict endpoint:
 
+python API.py
+
 $ curl -X POST -F image=@sample.jpg 'http://localhost:5000/predict'
 
-The classification result of the model will be displayed. 
+The final classification result will be displayed based on the sample picture. 
+
+
+## Reference
+For more information regarding resnet, please go to https://github.com/KaimingHe/deep-residual-networks and http://arxiv.org/abs/1512.03385.
 
 
 
