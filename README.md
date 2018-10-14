@@ -65,7 +65,11 @@ Stage 5: The convolutional block uses 3 set of filters of size [512, 512, 2048],
 The model is implemented in ResNet50(input_shape = (64, 64, 3), classes = 6) based on Keras.
 
 ## SIGNS Dataset
-The SIGNS data set is of the shape (64, 64, 3). There are 6 classes, representing number from 0 to 6. Each data point is a gesture The SIGNS data set is of the shape (64, 64, 3). There are 6 classes, representing number 0~6. Each data point is a gesture picture corresponding to the number. After normalization, the training and test labels is transformed into one hot matrix. The details for the dataset are:
+The SIGNS data set is of the shape (64, 64, 3). There are 6 classes, representing number from 0 to 6. Each data point is a gesture picture corresponding to the number.
+
+![](https://github.com/lixihan/hello-world/blob/master/SIGNS_dataset.png "")
+
+After normalization, the training and test labels are transformed into one hot matrix. The details for the dataset are:
 
 | Parameter                  | Value            | 
 | -------------              |:-------------:   | 
@@ -96,7 +100,11 @@ We use 10 epochs for fitting. Try other epochs can achieve different results. Be
 
 ## API
 
-Run API.py to initialize the REST API service. 
+Create a sample picture sample.jpg for classfication. Run API.py to initialize the REST API service. Then use curl to request to the /predict endpoint:
+
+$ curl -X POST -F image=@sample.jpg 'http://localhost:5000/predict'
+
+The classification result of the model will be displayed. 
 
 
 
