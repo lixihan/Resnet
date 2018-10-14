@@ -96,8 +96,7 @@ We use 10 epochs for fitting. Try other epochs can achieve different results. Be
 
 ## API
 
-
-
+Run API.py to initialize the REST API service. 
 
 
 
