@@ -101,15 +101,15 @@ We use 10 epochs for fitting. Try other epochs can achieve different results. Be
 ## API
 The REST API only has one module: API.py, including the following functions:
 
-(1) load_model: load the pre-trained Keras model 
+(1) load_model: load the pre-trained Keras model.
 
-(2) prepare_image: conduct pre-processing of the image. Obtain the image as the input. Convert the image into RGB format. Adjust the dimensions of the image to (64, 64, 3). Conduct mean subtraction and feature scaling. 
+(2) prepare_image: conduct the pre-processing of the image. Obtain the image as the input. Convert the image into the RGB format. Adjust the dimensions of the image to (64, 64, 3). Conduct mean subtraction and feature scaling. 
 
 (3) predict: achieve the API function with the prediction results. 
 
 Test the API based on the following steps:
 
-(1) Preparee a sample picture sample.jpg for classfication. 
+(1) Prepare a sample picture sample.jpg for classfication. 
 
 (2) Run API.py to initialize the REST API service.
 
@@ -124,22 +124,3 @@ The final classification result will be displayed based on the sample picture.
 
 ## Reference
 For more information regarding resnet, please go to https://github.com/KaimingHe/deep-residual-networks and http://arxiv.org/abs/1512.03385.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
