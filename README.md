@@ -99,10 +99,23 @@ model.fit(X_train, Y_train, epochs = 10, batch_size = 32)
 We use 10 epochs for fitting. Try other epochs can achieve different results. Better performance can be achieved for ~20 epochs, but this would be time-consuming on a CPU.
 
 ## API
+The REST API only has one module: API.py, including the following functions:
 
-Create a sample picture sample.jpg for classfication. Run API.py to initialize the REST API service. Then use curl to request to the /predict endpoint:
+(1) load_model: load the pre-trained Keras model 
+
+(2) prepare_image: conduct pre-processing of the image. Obtain the image as the input. Convert the image into RGB format. Adjust the dimensions of the image to (64, 64, 3). Conduct mean subtraction and feature scaling. 
+
+(3) predict: achieve the API function with the prediction results. 
+
+Test the API based on the following steps:
+
+(1) Preparee a sample picture sample.jpg for classfication. 
+
+(2) Run API.py to initialize the REST API service.
 
 $ python API.py
+
+(3) Use curl to request to the /predict endpoint:
 
 $ curl -X POST -F image=@sample.jpg 'http://localhost:5000/predict'
 
