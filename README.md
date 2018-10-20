@@ -109,12 +109,14 @@ The REST API only has one module: API.py, including the following functions:
 
 To set up the environment, you need to satisfy the following requirements:
 
-Python: 2.7
-pillow: 5.3.0
-Flask: 1.0.2
-tensorflow: 1.10.0
-Keras: 2.2.2
-numpy: 1.14.3
+| Python        |            2.7| 
+| ------------- |:-------------:| 
+| pillow        |          5.3.0|  
+| Flask         |          1.0.2|  
+| Tensorflow    |         1.10.0|
+| Keras         |          2.2.2|
+| numpy         |         1.14.3|
+
 
 To install pillow, run the following command:
 
