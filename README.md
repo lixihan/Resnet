@@ -118,9 +118,9 @@ To set up the environment, you need to satisfy the following requirements:
 | numpy         |         1.14.3|
 
 
-To install pillow, run the following command:
+Befofore running the API, you need to set up the environment based on the requirements. To run the requirements:
 
-$ conda install pillow
+$ pip install -r requirements.txt
 
 Test the API based on the following steps:
 
