@@ -52,9 +52,13 @@ def predict():
             # of predictions to return to the client
             with graph.as_default():
                 preds = model.predict(image)
+                results = keras.applications.resnet50.decode_predictions(preds)
             data["predictions"] = []
-            data["predictions"].append(preds)
-
+            
+            for (imagenetID, label, prob) in results[0]:
+                r = {"label": label, "probability": float(prob)}
+                data["predictions"].append(r)
+      
             # indicate that the request was a success
             data["success"] = True
 
